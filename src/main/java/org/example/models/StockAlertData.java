@@ -1,7 +1,12 @@
 package org.example.models;
 public class StockAlertData {
     private String productName;
-    private String currentQuantity;
+    private int currentQuantity;
+
+    public StockAlertData(int currentQuantity, String productName) {
+        this.currentQuantity = currentQuantity;
+        this.productName = productName;
+    }
 
     public String getProductName() {
         return productName;
@@ -11,16 +16,11 @@ public class StockAlertData {
         this.productName = productName;
     }
 
-    public String getCurrentQuantity() {
+    public int getCurrentQuantity() {
         return currentQuantity;
     }
 
-    public void setCurrentQuantity(String currentQuantity) {
-        this.currentQuantity = currentQuantity;
-    }
-
-    public StockAlertData(String productName, String currentQuantity) {
-        this.productName = productName;
+    public void setCurrentQuantity(int currentQuantity) {
         this.currentQuantity = currentQuantity;
     }
 }

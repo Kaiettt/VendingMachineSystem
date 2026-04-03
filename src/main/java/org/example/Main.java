@@ -22,8 +22,8 @@ public class Main {
 
         System.out.println("--- WELCOME TO HCMUTE VENDING MACHINE ---");
 
-        vm.selectItem("C1", 3); // Chon 3 Coca (Lay 2 tu A1, 1 tu A2)
-        vm.selectItem("W1", 1); // Chon 1 Nuoc suoi
+        vm.selectItem("C1", 12); // Chon 3 Coca (Lay 2 tu A1, 1 tu A2)
+        vm.selectItem("W1", 5); // Chon 1 Nuoc suoi
 
         System.out.println("Tong tien: " + vm.getCart().calculateTotal() + "đ");
 

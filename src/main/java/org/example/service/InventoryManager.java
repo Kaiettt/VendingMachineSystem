@@ -8,6 +8,14 @@ import java.util.List;
 public class InventoryManager {
     List<Slot> slots = new ArrayList<>();
 
+    public List<Slot> getSlots() {
+        return slots;
+    }
+
+    public void setSlots(List<Slot> slots) {
+        this.slots = slots;
+    }
+
     public void addSlot(Slot slot) { slots.add(slot); }
 
     public int getTotalStock(String productId) {

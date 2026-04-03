@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ISubscriber
 {
-    void Notify(List<StockAlertData> dataList);
+    void notify(List<StockAlertData> dataList);
 }

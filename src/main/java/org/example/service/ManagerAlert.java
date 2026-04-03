@@ -7,8 +7,8 @@ import java.util.List;
 
 public class ManagerAlert implements ISubscriber {
     @Override
-    public void Notify(List<StockAlertData> dataList) {
-        System.out.println("--- STAFF ALERT: LOW STOCK DETECTED ---");
+    public void notify(List<StockAlertData> dataList) {
+        System.out.println("--- MANAGER ALERT: LOW STOCK DETECTED ---");
         for (StockAlertData item : dataList) {
             System.out.println("Product: " + item.getProductName() +
                     " | Remaining: " + item.getCurrentQuantity());

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class StaffAlert implements ISubscriber {
     @Override
-    public void Notify(List<StockAlertData> dataList) {
+    public void notify(List<StockAlertData> dataList) {
         System.out.println("--- STAFF ALERT: LOW STOCK DETECTED ---");
         for (StockAlertData item : dataList) {
             System.out.println("Product: " + item.getProductName() +

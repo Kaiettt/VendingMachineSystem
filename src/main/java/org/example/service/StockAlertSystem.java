@@ -2,10 +2,13 @@ package org.example.service;
 
 import org.example.interfaces.ISubscriber;
 import org.example.models.Product;
+import org.example.models.Slot;
 import org.example.models.StockAlertData;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.example.Common.Common.OUT_OF_STOCK_THRESHOLD;
 
 public class StockAlertSystem {
     private List<ISubscriber> subscribers = new ArrayList<>();
@@ -14,12 +17,12 @@ public class StockAlertSystem {
         subscribers.add(sub);
     }
 
-    public void checkStockLevels(List<Product> products) {
+    public void checkStockLevels(List<Slot> slots) {
         List<StockAlertData> lowStockItems = new ArrayList<>();
 
-        for (Product p : products) {
-            if (p.getQuantity() < 5) { // Threshold logic
-                lowStockItems.add(new StockAlertData(p.getName(), p.getQuantity()));
+        for (Slot slot : slots) {
+            if (slot.getQuantity() <= OUT_OF_STOCK_THRESHOLD) {
+                lowStockItems.add(new StockAlertData(slot.getQuantity(), slot.getProduct().getName()));
             }
         }
 
